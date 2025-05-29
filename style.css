@@ -1,0 +1,139 @@
+/* Add Google Fonts for Quicksand and Open Sans */
+/* In your HTML <head>, add:
+<link href="https://fonts.googleapis.com/css?family=Quicksand:700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
+*/
+
+/* Define color variables for easy use */
+:root {
+  --fern-green: #628b48ff;
+  --mantis: #6ab547ff;
+  --citrine: #edd83dff;
+  --beige: #f3f9e3ff;
+  --puce: #d8829dff;
+}
+
+/* Basic reset for margin and padding */
+body, h1, h2, h3, h4, h5, h6, ul, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set a simple background and font for the whole page */
+body {
+  font-family: 'Open Sans', Arial, sans-serif; /* Easy-to-read body font */
+  background-color: var(--beige);              /* Soft beige background */
+  color: var(--fern-green);                    /* Fern green text for contrast */
+}
+
+/* Style the header */
+header {
+  background-color: #fff;        /* White background for header */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow */
+  padding: 16px 0;               /* Space above and below */
+  display: flex;
+  flex-direction: column;        /* Stack items vertically on mobile */
+  align-items: center;           /* Center items horizontally */
+}
+
+/* Style the logo */
+.logo {
+  font-family: 'Quicksand', Arial, sans-serif; /* Friendly font for logo */
+  font-size: 1.5em;              /* Make logo text bigger */
+  font-weight: bold;
+  color: var(--mantis);                        /* Use mantis green for logo */
+  margin-bottom: 8px;            /* Space below logo */
+}
+
+/* Style the navigation links */
+.nav-links {
+  list-style: none;              /* Remove bullet points */
+  display: flex;
+  flex-direction: column;        /* Stack links vertically on mobile */
+  gap: 8px;                      /* Space between links */
+  align-items: center;           /* Center links */
+  padding: 0;
+}
+
+/* Style each link */
+.nav-links a {
+  text-decoration: none;         /* Remove underline */
+  color: var(--fern-green);                    /* Fern green for links */
+  padding: 8px 16px;             /* Add some space around links */
+  border-radius: 4px;            /* Rounded corners */
+  transition: background 0.2s;   /* Smooth hover effect */
+  font-family: 'Open Sans', Arial, sans-serif; /* Use body font for links */
+  font-weight: 700;                            /* Make links bold */
+}
+
+.nav-links a:hover {
+  background-color: var(--citrine);            /* Citrine yellow on hover */
+  color: var(--fern-green);                    /* Fern green text on hover */
+}
+
+/* Hero section styles */
+.hero {
+  /* Linear gradient background using green and yellow colors */
+  background: linear-gradient(135deg, var(--mantis), var(--citrine));
+  height: 100vh; /* Full viewport height */
+  display: flex; /* Use flex to center content */
+  flex-direction: column; /* Stack headline and paragraph vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  text-align: center;      /* Center text */
+  padding: 0 16px;         /* Small padding on sides for mobile */
+}
+
+/* Hero headline style */
+.hero h1 {
+  font-family: 'Quicksand', Arial, sans-serif; /* Friendly font */
+  font-size: 2.2em;        /* Large headline */
+  color: var(--fern-green);
+  margin-bottom: 16px;     /* Space below headline */
+}
+
+/* Hero paragraph style */
+.hero p {
+  font-family: 'Open Sans', Arial, sans-serif; /* Body font */
+  font-size: 1.2em;
+  color: var(--fern-green);
+  max-width: 500px;        /* Limit width for better readability */
+}
+
+/* Style for the call to action button */
+.hero-btn {
+  display: inline-block;                /* Make the link look like a button */
+  margin-top: 24px;                     /* Space above the button */
+  padding: 12px 28px;                   /* Padding inside the button */
+  background-color: var(--fern-green);  /* Fern green background */
+  color: #fff;                          /* White text */
+  font-family: 'Quicksand', Arial, sans-serif; /* Match headline font */
+  font-size: 1.1em;                     /* Slightly larger text */
+  font-weight: bold;
+  border: none;                         /* No border */
+  border-radius: 4px;                   /* Rounded corners */
+  text-decoration: none;                /* Remove underline */
+  transition: background 0.2s;          /* Smooth hover effect */
+  cursor: pointer;                      /* Pointer cursor on hover */
+}
+
+.hero-btn:hover {
+  background-color: var(--mantis);      /* Lighter green on hover */
+  color: var(--fern-green);             /* Fern green text on hover */
+}
+
+/* Make navigation horizontal on larger screens */
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;         /* Row layout for header */
+    justify-content: space-between; /* Space between logo and nav */
+    padding: 16px 40px;          /* More space on sides */
+  }
+  .logo {
+    margin-bottom: 0;            /* Remove bottom margin */
+  }
+  .nav-links {
+    flex-direction: row;         /* Show links in a row */
+    gap: 16px;                   /* More space between links */
+  }
+}
